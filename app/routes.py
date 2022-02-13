@@ -2,10 +2,11 @@
 from app import app
 from flask import render_template
 
+
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Miguel'}
+    user = {'username': 'Master'}
     posts = [
         {
             'author': {'username': 'John'},
@@ -17,4 +18,4 @@ def index():
         }
     ]
 
-    return render_template('index.html', title='Casa', user=user, posts=posts)
+    return render_template('index.html', title='Home', user=user, posts=posts)
