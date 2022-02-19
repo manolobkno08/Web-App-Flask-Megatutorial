@@ -11,10 +11,11 @@
 
 <body>
     <div> Microblog:
-        <a href="/index">Home</a>
-        <a href="/login">Login</a>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('login') }}">Login</a>
     <div>
     <hr>
+    <!-- Handle errors by requirements in forms -->
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul>
