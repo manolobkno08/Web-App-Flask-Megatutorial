@@ -11,6 +11,6 @@ app.config.from_object(Config) #app.config['SECRET_KEY'] = 'you-will-never-guess
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-# Import routes above to create app object
+# Import routes above to create app object - avoid circular imports
 from app import routes, models
 
