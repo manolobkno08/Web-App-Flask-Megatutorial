@@ -7,6 +7,7 @@ from app.forms import LoginForm
 @app.route('/')
 @app.route('/index')
 def index():
+    """Root view"""
     user = {'username': 'Master'}
     posts = [
         {
@@ -26,6 +27,7 @@ def index():
 def login():
     """Redirect and capture data from form submitted"""
     form = LoginForm()
+    # Check if method is POST and everything is all right it will return True
     if form.validate_on_submit():
         flash(
             f'Login requested for user: {form.username.data}, remember_me: {form.remember_me.data}')
